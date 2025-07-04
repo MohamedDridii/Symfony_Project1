@@ -14,7 +14,7 @@ class Movie
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $movie_name = null;
+    private ?string $movie = null;
 
     #[ORM\Column(length: 255)]
     private ?string $description = null;
@@ -24,14 +24,14 @@ class Movie
         return $this->id;
     }
 
-    public function getMovieName(): ?string
+    public function getMovie(): ?string
     {
-        return $this->movie_name;
+        return $this->movie;
     }
 
-    public function setMovieName(string $movie_name): static
+    public function setMovie(string $movie): static
     {
-        $this->movie_name = $movie_name;
+        $this->movie = $movie;
 
         return $this;
     }

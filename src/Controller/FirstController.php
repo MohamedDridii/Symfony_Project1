@@ -15,7 +15,7 @@ final class FirstController extends AbstractController
     public function index(EntityManagerInterface $manager): Response
     { 
         $movie=new Movie();
-        $movie->setMovieName('The Matrix');
+        $movie->setMovie('The Matrix');
         $movie->setDescription('A computer hacker learns about the true nature of his reality and his role in the war against its controllers.');
         $manager->persist($movie);
         $manager->flush();
